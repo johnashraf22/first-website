@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="dumpfile.css">
+</head>
+</head>
+<body>
+  <div class="overlay"></div>
+  <header class="header">
+    <div class="left-section">
+      <img src="jones logo.png" class="logo">
+    </div>
+    <div class="right-section">
+      <ul>
+        <li class="header-buttons">Home</li>
+        <li class="header-buttons">Services</li>
+        <li class="header-buttons">About</li>
+        <li class="header-buttons">Clients</li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i> 
+        
+      </div>
+    </div>
+  </header>
+  <div class="actual-body">
+     <div class="top-header">join us today!</div>
+      <div class="paragraph">
+        we offer great services that serves your wishes
+      </div> 
+      <div id="output"></div>
+      <input type="text" id="textInput" placeholder=" type your name ">
+      <button onclick="printInput()">JOIN</button>
+  </div>
+
+      
+  <script>
+    function printInput() {
+  var input = document.getElementById("textInput");
+  var inputValue = input.value;
+  var output = document.getElementById("output");
+  output.textContent = "welcome " + inputValue + " to our family";
+}
+  </script>
+    
+
+</body>
+</html>
