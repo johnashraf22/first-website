@@ -152,7 +152,7 @@
 </style>
 </head>
 <body>
-  <div class="overlay"></div>
+<div class="overlay"></div>
   <header class="header">
     <div class="left-section">
       <img src="jones logo.png" class="logo">
@@ -164,10 +164,7 @@
         <li class="header-buttons">About</li>
         <li class="header-buttons">Clients</li>
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i> 
-        
-      </div>
+
     </div>
   </header>
   <div class="actual-body">
@@ -182,11 +179,10 @@
 
       
   <script>
-    function printInput() {
-  var input = document.getElementById("textInput");
-  var inputValue = input.value;
-  var output = document.getElementById("output");
-  output.textContent = "welcome " + inputValue + " to our family";
+  function printInput() {
+  let input = document.getElementById("textInput").value;
+  let output = document.getElementById("output");
+  output.textContent = "welcome " + input + " to our family";
 }
   </script>
     
