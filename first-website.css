@@ -87,12 +87,13 @@ ul {
 .top-header{
   align-self: center;
   font-size: 70px;
+  text-align: center;
 }
 .paragraph{
   align-self: center;
   font-size: 30px;
   margin-top: 10px;
-
+  text-align: center;
 }
 button{
   background-color: rgb(61, 145, 197);
@@ -116,6 +117,7 @@ button:active{
   color: white;
   padding: 20px;
   cursor: pointer;
+  display: none;
 }
 #textInput{
   width: 350px;
@@ -124,6 +126,8 @@ button:active{
   height: 50px;
   border-radius: 25px;
   border: none;
+  max-width: 80%;
+
 }
 input[type="text"] {
   padding-left: 30px;
@@ -137,6 +141,45 @@ input[type="text"] {
   align-self: center;
   position: absolute;
   font-size: 60px;
-  width: 900px;
   text-align: center;
+}
+@media screen and (max-width:650px) {
+  .menu-icon{
+    display: inline-block;
+  }
+  ul#menu {
+    display: none;
+    transition: 2;
+  }
+  ul#menu.show {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background-color: rgb(23, 25, 41);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10%;
+  }
+  .header-buttons {
+    width: 100%;
+  }
+  .top-header{
+    font-size: 55px;
+    font-weight: bold;
+  }
+  .paragraph{
+    font-size: 23px;
+  }
+  #output{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  #text-input{
+    width: 250px;
+  }
 }
