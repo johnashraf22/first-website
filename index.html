@@ -5,166 +5,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="dumpfile.css">
-<style>
-  body {
-    font-family: arial;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 0;
-    overflow-x: hidden;
+  <style>
+    body {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+.header {
+  background-color: rgba(23, 25, 41, 0.726);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  z-index: 1;
+}
+ul {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 15px; 
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  list-style-type: none;
+}
+.header-buttons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 70px;
+  width: 90px;
+}
+.header-buttons:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(23, 25, 41, 0.726) ;
+  height: 70px;
+  width: 90px;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin-left: 30px;
+}
+.right-section {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  width: 400px;
+
+}
+.logo {
+  height: 50px;
+  width: 90px;
+
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.167);
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+.actual-body{
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  flex-direction: column;
+  position: relative;
+}
+.top-header{
+  align-self: center;
+  font-size: 70px;
+}
+.paragraph{
+  align-self: center;
+  font-size: 30px;
+  margin-top: 10px;
+
+}
+button{
+  background-color: rgb(61, 145, 197);
+  width: 110px;
+  height: 50px;
+  align-self: center;
+  border: none;
+  margin-top: 25px;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover{
+  opacity: 0.6;
+}
+button:active{
+  opacity: 0.4;
+}
+.menu-icon{
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  display: none;
+}
+#textInput{
+  width: 350px;
+  align-self: center;
+  margin-top: 150px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+}
+input[type="text"] {
+  padding-left: 30px;
+  font-size: 25px;
+}
+::placeholder {
+  font-size: 25px;
+}
+#output{
+  color: rgb(205, 149, 118);
+  align-self: center;
+  position: absolute;
+  font-size: 60px;
+  width: 900px;
+  text-align: center;
+}
+@media screen and (max-width:650px) {
+  .menu-icon{
+    display: inline-block;
   }
-  .header {
-    background-color: rgba(23, 25, 41, 0.726);
-    height: 70px;
+  ul#menu {
+    display: none;
+    transition: 2;
+  }
+  ul#menu.show {
     display: flex;
-    justify-content: space-between;
+    z-index: 2;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background-color: rgb(23, 25, 41);
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 20px; 
-    z-index: 1;
-  }
-  ul {
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 15px; 
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
-    list-style-type: none;
+    padding-top: 10%;
   }
   .header-buttons {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    height: 70px;
-    width: 90px;
-  }
-  .header-buttons:hover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: rgba(23, 25, 41, 0.726) ;
-    height: 70px;
-    width: 90px;
-  }
-  .left-section {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    margin-left: 30px;
-  }
-  .right-section {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-    width: 400px;
-  
-  }
-  .logo {
-    height: 50px;
-    width: 90px;
-  
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.167);
-    backdrop-filter: blur(6px);
-    z-index: -1;
-  }
-  .actual-body{
-    color: white;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    flex-direction: column;
-    position: relative;
   }
   .top-header{
-    align-self: center;
-    font-size: 70px;
+    font-size: 55px;
+    font-weight: bold;
   }
   .paragraph{
-    align-self: center;
-    font-size: 30px;
-    margin-top: 10px;
-  
-  }
-  button{
-    background-color: rgb(61, 145, 197);
-    width: 110px;
-    height: 50px;
-    align-self: center;
-    border: none;
-    margin-top: 25px;
-    border-radius: 40px;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  button:hover{
-    opacity: 0.6;
-  }
-  button:active{
-    opacity: 0.4;
-  }
-  .menu-icon{
-    color: white;
-    padding: 20px;
-    cursor: pointer;
-  }
-  #textInput{
-    width: 350px;
-    align-self: center;
-    margin-top: 150px;
-    height: 50px;
-    border-radius: 25px;
-    border: none;
-  }
-  input[type="text"] {
-    padding-left: 30px;
     font-size: 25px;
   }
-  ::placeholder {
-    font-size: 25px;
-  }
-  #output{
-    color: rgb(205, 149, 118);
-    align-self: center;
-    position: absolute;
-    font-size: 60px;
-    width: 900px;
-    text-align: center;
-  }
-</style>
+}
+  </style>
+</head>
 </head>
 <body>
-<div class="overlay"></div>
+  <div class="overlay"></div>
   <header class="header">
     <div class="left-section">
       <img src="jones logo.png" class="logo">
     </div>
     <div class="right-section">
-      <ul>
+      <ul id="menu">
         <li class="header-buttons">Home</li>
         <li class="header-buttons">Services</li>
         <li class="header-buttons">About</li>
         <li class="header-buttons">Clients</li>
       </ul>
-
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i> 
+      </div>
     </div>
   </header>
   <div class="actual-body">
@@ -179,10 +215,15 @@
 
       
   <script>
-  function printInput() {
-  let input = document.getElementById("textInput").value;
-  let output = document.getElementById("output");
-  output.textContent = "welcome " + input + " to our family";
+    function printInput() {
+  var input = document.getElementById("textInput");
+  var inputValue = input.value;
+  var output = document.getElementById("output");
+  output.textContent = "welcome " + inputValue + " to our family";
+}
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("show");
 }
   </script>
     
