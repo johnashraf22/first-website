@@ -6,7 +6,7 @@
   <title>My Website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    body {
+  body {
   font-family: arial;
   margin: 0;
   padding: 0;
@@ -95,12 +95,13 @@ ul {
 .top-header{
   align-self: center;
   font-size: 70px;
+  text-align: center;
 }
 .paragraph{
   align-self: center;
   font-size: 30px;
   margin-top: 10px;
-
+  text-align: center;
 }
 button{
   background-color: rgb(61, 145, 197);
@@ -133,6 +134,8 @@ button:active{
   height: 50px;
   border-radius: 25px;
   border: none;
+  max-width: 80%;
+
 }
 input[type="text"] {
   padding-left: 30px;
@@ -146,7 +149,6 @@ input[type="text"] {
   align-self: center;
   position: absolute;
   font-size: 60px;
-  width: 900px;
   text-align: center;
 }
 @media screen and (max-width:650px) {
@@ -179,7 +181,14 @@ input[type="text"] {
     font-weight: bold;
   }
   .paragraph{
-    font-size: 25px;
+    font-size: 23px;
+  }
+  #output{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  #text-input{
+    width: 250px;
   }
 }
   </style>
