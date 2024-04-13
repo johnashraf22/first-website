@@ -15,7 +15,7 @@
       <img src="jones logo.png" class="logo">
     </div>
     <div class="right-section">
-      <ul>
+      <ul id="menu">
         <li class="header-buttons">Home</li>
         <li class="header-buttons">Services</li>
         <li class="header-buttons">About</li>
@@ -23,7 +23,6 @@
       </ul>
       <div class="menu-icon" onclick="toggleMenu()">
         <i class="fas fa-bars"></i> 
-        
       </div>
     </div>
   </header>
@@ -44,6 +43,10 @@
   var inputValue = input.value;
   var output = document.getElementById("output");
   output.textContent = "welcome " + inputValue + " to our family";
+}
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("show");
 }
   </script>
     
